@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+  server:
+    build:
+      context: ./backend
+      dockerfile: dockerfile
+    image: aswinrprasad/todoapp-v2-be
+    command: npm start
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    env_file: ./backend/.env
+    environment:
+      - NODE_ENV=development
+    networks:
+      - app-network
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+  client:
+    build:
+      context: ./frontend
+      dockerfile: dockerfile
+    image: aswinrprasad/todoapp-v2-fe
+    command: npm start
+    depends_on:
+      - server
+    ports:
+      - "3005:3005"
+    networks:
+      - app-network
+
+networks:
+    app-network: 
+      external:
+        name: mern_app_nw
+

@@ -1,0 +1,83 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://www.makerstations.io/content/images/2022/02/mlkstudy_--study-setup-maker-stations-1.jpeg');
+  background-position: center;
+  background-size: cover;
+  position:center;
+}
+.moosic{
+  position:fixed;
+  right: 100px;
+  bottom: 20px;
+}
+.back-frem{
+  width: 18rem;
+  height: 6rem;
+  background: transparent;
+  border-radius: 23px;
+  position: fixed;
+  left:70px;
+  bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.back-frem .back-chang{
+  width: 91px;
+  height: 91px;
+  background: wheat;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 23px;
+}
+.back-frem .back-chang img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

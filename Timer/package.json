@@ -1,0 +1,15 @@
+{
+  "name": "timer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "adithi",
+  "license": "ISC",
+  "dependencies": {
+    "react-circular-progressbar": "^2.1.0",
+    "react-slider": "^2.0.4"
+  }
+}
